@@ -56,15 +56,13 @@
 }
 .gallery {
   display: flex;
-  margin: 0 auto;
   flex-wrap: wrap;
-  max-width: 1128px;
-  column-gap: 24px;
-  row-gap: 48px;
-  list-style-type: none;
+  justify-content: center;
+  padding-top: 24px;
+  gap: 24px;
 }
 
-img {
+.gallery-image {
   width: 360px;
   height: 200px;
 }
