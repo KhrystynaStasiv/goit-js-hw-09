@@ -23,3 +23,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
