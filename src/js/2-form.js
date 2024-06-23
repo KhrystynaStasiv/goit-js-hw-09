@@ -1,7 +1,8 @@
 const formData = { email: '', message: '' };
 
 const form = document.querySelector('.feedback-form');
-const textarea = document.querySelector('textarea');
+const emailInput = form.querySelector('input[name = "email"]');
+const messageInput = form.querySelector('textarea[name = "message"]');
 
 form.addEventListener('input', () => {
   const formData = new FormData(form);
@@ -14,7 +15,7 @@ form.addEventListener('input', () => {
 
 function saveToLS(key, value) {
   const jsonData = JSON.stringify(value);
-  localStorage.setItem(key, jsonData);
+  localStorage.setItem('feedback-form-state', jsonData);
 }
 
 function loadFromLS(key) {
