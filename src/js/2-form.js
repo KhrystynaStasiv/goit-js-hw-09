@@ -12,7 +12,7 @@ form.addEventListener('input', () => {
   saveToLS('message', message);
   saveToLS('formData', data);
 });
-======================================!
+
 function saveToLS(key, value) {
   const jsonData = JSON.stringify(value);
   localStorage.setItem('feedback-form-state', jsonData);
