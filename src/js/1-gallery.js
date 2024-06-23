@@ -82,9 +82,8 @@ function imagesTemplate(arr) {
 }
 
 const markup = imagesTemplate(images);
-container.innerHTML = markup;
-
-let container = new SimpleLightbox('.gallery a', {
+container.insertAdjacentHTML('beforeend', markup);
+let gallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionsData: 'alt',
 });
