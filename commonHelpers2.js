@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */const e=document.querySelector(".feedback-form");e.querySelector('input[name = "email"]');e.querySelector('textarea[name = "message"]');e.addEventListener("input",()=>{const t=new FormData(e),a=t.get("email"),o=t.get("message");m("email",a),m("message",o),m("formData",data)});function m(t,a){const o=JSON.stringify(a);localStorage.setItem("feedback-form-state",o)}
+//# sourceMappingURL=commonHelpers2.js.map
