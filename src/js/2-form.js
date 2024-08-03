@@ -1,6 +1,6 @@
 'use strict';
 
-const formData = { email: '', message: '' };
+let formData = { email: '', message: '' };
 
 const form = document.querySelector('.feedback-form');
 const emailInput = document.querySelector('input[name="email"]');
