@@ -3,21 +3,20 @@
 const formData = { email: '', message: '' };
 
 const form = document.querySelector('.feedback-form');
-const emailInput = document.querySelector('input');
-const messageInput = document.querySelector('textarea');
+const emailInput = document.querySelector('input[name="email"]');
+const messageInput = document.querySelector('textarea[name="message"]');
 
-form.addEventListener('input', () => {
-  formData.email = e.currentTarget.email.value.trim();
-  formData.message = e.currentTarget.message.value.trim();
+form.addEventListener('input', event => {
+  formData.email = emailInput.value.trim();
+  formData.message = messageInput.value.trim();
   saveToLS('feedback-form-state', formData);
 });
 
 form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
-  e.preventDefault();
-  const form = event.target;
-  const email = form.elements.email.value.trim();
-  const message = form.elements.message.value.trim();
+  event.preventDefault();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
 
   if (email === '' || message === '') {
     alert('Fill please all fields');
@@ -37,9 +36,8 @@ function saveToLS(key, value) {
 function loadFromLS(key) {
   const json = localStorage.getItem(key);
   try {
-    const data = JSON.parse(json);
-    return data;
+    return JSON.parse(json);
   } catch {
-    return json;
+    return null;
   }
 }
