@@ -40,7 +40,10 @@ form.addEventListener('submit', event => {
   }
   console.log('Form data:', formData);
   localStorage.removeItem('feedback-form-state');
-
+  formData = {
+    email: '',
+    message: '',
+  };
   form.reset();
 });
 
